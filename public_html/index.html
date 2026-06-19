@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Management Form</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JPDB Library -->
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+
+</head>
+
+<body onload="resetForm()">
+
+<div class="container">
+
+    <h2 class="text-center">Project Management Form</h2>
+
+    <form id="projectForm">
+
+        <div class="form-group">
+            <label for="projectId">Project ID</label>
+            <input type="text"
+                   class="form-control"
+                   id="projectId"
+                   placeholder="Enter Project ID"
+                   onchange="getProject()">
+        </div>
+
+        <div class="form-group">
+            <label for="projectName">Project Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="projectName"
+                   placeholder="Enter Project Name">
+        </div>
+
+        <div class="form-group">
+            <label for="assignedTo">Assigned To</label>
+            <input type="text"
+                   class="form-control"
+                   id="assignedTo"
+                   placeholder="Enter Employee Name">
+        </div>
+
+        <div class="form-group">
+            <label for="assignmentDate">Assignment Date</label>
+            <input type="date"
+                   class="form-control"
+                   id="assignmentDate">
+        </div>
+
+        <div class="form-group">
+            <label for="deadline">Deadline</label>
+            <input type="date"
+                   class="form-control"
+                   id="deadline">
+        </div>
+
+        <br>
+
+        <button type="button"
+                id="saveBtn"
+                class="btn btn-success"
+                onclick="saveData()">
+            Save
+        </button>
+
+        <button type="button"
+                id="updateBtn"
+                class="btn btn-primary"
+                onclick="updateData()">
+            Update
+        </button>
+
+        <button type="button"
+                id="resetBtn"
+                class="btn btn-danger"
+                onclick="resetForm()">
+            Reset
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
